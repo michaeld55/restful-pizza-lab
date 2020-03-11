@@ -1,4 +1,4 @@
-<form method="post" action="/pizza-orders/<%= @order.id %>/update">
+<form method="post" action="/pizza_orders/<%= @order.id %>/update">
   <label for="first-name">First Name:</label>
     <input type="text" name="first_name" id="first-name" value="<%= @order.first_name %>">
 
@@ -6,11 +6,16 @@
     <input type="text" name="last_name" id="last-name" value="<%= @order.last_name %>">
 
   <label for="pizza-select">Select Pizza:</label>
-  <select id="pizza-select" name="topping" value = "<%= @order.topping %>">
-    <option value="Margherita">Margherita</option>
-    <option value="Pepperoni">Pepperoni</option>
-    <option value="Quattro Fromaggi">Quattro Fromaggi</option>
-    <option value="Vegan">Vegan</option>
+  <select id="pizza-select" name="topping">
+    <option
+    value="Margherita"
+    <%= "selected" if @order.topping == "Margherita" %>
+    >Margherita</option>
+    <option value="Pepperoni"
+      <%= "selected"  if @order.topping == "Pepperoni" %>
+      >Pepperoni</option>
+    <option value="Quattro Fromaggi" <%= "selected" if @order.topping == "Quattro Fromaggi" %>>Quattro Fromaggi</option>
+    <option value="Vegan" <%= "selected" if @order.topping == "Vegan" %>>Vegan</option>
   </select>
 
   <label for="quantity">Quantity</label>
