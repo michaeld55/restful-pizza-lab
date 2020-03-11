@@ -7,15 +7,18 @@
 
   <label for="pizza-select">Select Pizza:</label>
   <select id="pizza-select" name="topping">
-    <option
-    value="Margherita"
-    <%= "selected" if @order.topping == "Margherita" %>
-    >Margherita</option>
-    <option value="Pepperoni"
-      <%= "selected"  if @order.topping == "Pepperoni" %>
-      >Pepperoni</option>
-    <option value="Quattro Fromaggi" <%= "selected" if @order.topping == "Quattro Fromaggi" %>>Quattro Fromaggi</option>
-    <option value="Vegan" <%= "selected" if @order.topping == "Vegan" %>>Vegan</option>
+    <option value="Margherita"<%= "selected" if @order.topping == "Margherita" %>>
+      Margherita
+    </option>
+    <option value="Pepperoni"<%= "selected"  if @order.topping == "Pepperoni" %>>
+      Pepperoni
+    </option>
+    <option value="Quattro Fromaggi" <%= "selected" if @order.topping == "Quattro Fromaggi" %>>
+      Quattro Fromaggi
+    </option>
+    <option value="Vegan" <%= "selected" if @order.topping == "Vegan" %>>
+      Vegan
+    </option>
   </select>
 
   <label for="quantity">Quantity</label>
